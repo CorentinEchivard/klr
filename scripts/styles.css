@@ -30,10 +30,10 @@ body {
 
 html::-webkit-scrollbar {
     width: 10px;
-    background-color: white; 
+    background-color: white;
     }
 html::-webkit-scrollbar-thumb {
-    background: black; 
+    background: black;
     }
 
 /* Séléction texte */
@@ -98,7 +98,7 @@ bold{
     position: fixed;
     z-index: 2;
     width: 100%;
-    height: auto; 
+    height: auto;
     border-bottom: 1px solid black;
     }
 
@@ -134,18 +134,16 @@ bold{
     }
 
 .menu{
-    background: none;
-    z-index: 0;
     width: 100%;
     margin-top: 30px;
-    height: 29px; 
+    height: 29px;
     }
 
 .navbutton{
     float: left;
     display: inline;
     text-align: center;
-    width: 24.9%;   
+    width: 24.9%;
     border-left: 1px solid black;
     }
 
@@ -153,8 +151,8 @@ bold{
 
 /* Menu projets */
 
-.menuprojet { 
-    z-index: 3;
+.menuprojet {
+    z-index: 1;
     box-sizing: border-box;
     position:fixed;
     top: 30px;
@@ -164,7 +162,8 @@ bold{
     border-right: 1px solid black;
     }
 
-.description { 
+.description {
+    z-index: 0;
     box-sizing: border-box;
     position: relative;
     width: 15%;
@@ -177,7 +176,7 @@ bold{
     margin-bottom: 10px;
 }
 
-.projets { 
+.projets {
     position: absolute;
     z-index: -1;
     box-sizing: border-box;
@@ -199,7 +198,7 @@ bold{
 
 /* Menu index */
 
-#index{    
+#index{
     z-index: 4;
     position: fixed;
     background: white;
@@ -243,8 +242,8 @@ bold{
 
 /* Responsive Tablette */
 
-@media screen and (min-width:801px) and (max-width:1000px) {  
-  
+@media screen and (min-width:801px) and (max-width:1000px) {
+
 /* Texte */
 
 h1 {
@@ -255,8 +254,8 @@ h1 {
  h2 {
     font-size: 1.5em;
     line-height: 1.2em;
-    }   
-    
+    }
+
 /* Menu de navigation */
 
 .navigation {
@@ -264,48 +263,48 @@ h1 {
     border-bottom: none;
     z-index: 4;
     }
-    
+
 .navbutton{
     float: left;
     display: inline-block;
     text-align: center;
-    width: 49.8%;   
+    width: 49.8%;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
     border-left:none;
     }
-    
+
 .nb2{
     border-right: none;
     }
 .nb4{
     border-right: none;
     }
-    
+
 #index{
     border-top: none;
     z-index: 4;
     }
-    
-    
-/*  Menu visible des projets */    
-  
-.menuprojet { 
+
+
+/*  Menu visible des projets */
+
+.menuprojet {
     box-sizing: border-box;
     position: fixed;
-    top: 80px;
+    top: 70px;
     width: 30%;
     height: 100%;
     padding: 1em;
     z-index: 3;
     }
 
-    
-    
+
+
  /* Descritpions des projets */
-   
+
 .description {
-    top: 80px;  
+    top: 70px;
     width: 70%;
     left: 30%;
     padding: 1em;
@@ -314,26 +313,25 @@ h1 {
     }
 
 .titrecolonne{
-    background: red;
     width: 32%;
     display:inline-block;
     height: auto;
     box-sizing: border-box;
 
     }
-    
-    
-    
+
+
+
 /* Bloc image des projets */
-    
-.projets { 
+
+.projets {
     position: relative;
     padding: 1em 1em 1em 1em;
     left: 30%;
     width: 70%;
     border-top: 1px solid black;
     border-left: none;
-    }  
+    }
 }
 
 
@@ -341,7 +339,7 @@ h1 {
 
 @media screen and (max-width:800px) {
 
-    
+
 /* Texte */
 
 h1 {
@@ -352,10 +350,10 @@ h1 {
  h2 {
     font-size: 1.25em;
     line-height: 1.2em;
-    }  
-    
-    
-    
+    }
+
+
+
 /* Défilement texte */
 
 .defilement {
@@ -370,11 +368,11 @@ h1 {
     position: fixed;
     z-index: 10;
     }
-    
-    
-    
+
+
+
  /* Menu de navigation */
-   
+
 .navigation {
     background: white;
     position: relative;
@@ -383,17 +381,17 @@ h1 {
     border-bottom: none;
     height: auto;
     }
-    
+
 .navbutton{
-    width: 100%;   
+    width: 100%;
     border-right: none;
     border-left:none;
     border-bottom: 1px solid black;
     }
- 
-    
-/*  Menu visible des projets */    
-.menuprojet { 
+
+
+/*  Menu visible des projets */
+.menuprojet {
     box-sizing: border-box;
     position:relative;
     display: block;
@@ -412,9 +410,9 @@ h1 {
     height: auto;
     transform: translateX(0%) translateY(-50%);
     }
-    
-    
-    
+
+
+
  /* Descritpions des projets */
 
 .description {
@@ -431,18 +429,18 @@ h1 {
     display:inline-block;
     height: auto;
     }
-   
-    
-    
+
+
+
 /* Bloc image des projets */
 
-.projets { 
+.projets {
     position: relative;
     left: 0%;
     width: 100%;
     height: auto;
     border-left: none;
     padding: 0em 1em 1em 1em;
-    }   
-  
+    }
+
 }
