@@ -98,8 +98,9 @@ bold{
     position: fixed;
     z-index: 2;
     width: 100%;
-    height: auto;
+    height: 60px;
     border-bottom: 1px solid black;
+
     }
 
 /* Défilement texte */
@@ -134,14 +135,16 @@ bold{
     }
 
 .menu{
+    font-size: 1.5em;
+    line-height: 1.2em;
     width: 100%;
-    margin-top: 30px;
-    height: 29px;
+    margin-top: 31px;
+    height: 30px;
+    clear:inline-end;
     }
 
 .navbutton{
     float: left;
-    display: inline;
     text-align: center;
     width: 24.9%;
     border-left: 1px solid black;
@@ -158,20 +161,20 @@ bold{
     top: 30px;
     width: 24.95%;
     height: 100%;
-    padding: 1em;
+    padding: 15px;
     border-right: 1px solid black;
     }
 
 .description {
     z-index: 0;
-    box-sizing: border-box;
-    position: relative;
+    position: fixed;
     width: 15%;
     top: 30px;
     left: 25%;
-    padding: 1em;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
     }
-
 .titrecolonne{
     margin-bottom: 10px;
 }
@@ -184,9 +187,19 @@ bold{
     left: 40%;
     height: auto;
     width: 60%;
-    padding: 1em 1em 0em 1em;
+    padding: 15px;
+    padding-bottom: 0;
     border-left: 1px solid black;
     }
+
+.apropos{
+  float: right;
+  left: 40%;
+  top: 0px;
+  position: relative;
+  background-color: red;
+  height: 100%;
+}
 
 .image {
     float: right;
@@ -242,7 +255,7 @@ bold{
 
 /* Responsive Tablette */
 
-@media screen and (min-width:801px) and (max-width:1000px) {
+@media screen and (min-width:701px) and (max-width:1000px) {
 
 /* Texte */
 
@@ -259,10 +272,29 @@ h1 {
 /* Menu de navigation */
 
 .navigation {
-    position: fixed;
+    background: white;
+    position: relative;
     border-bottom: none;
     z-index: 4;
+    height: 90px;
     }
+
+.defilement{
+    position: fixed;
+}
+
+.menu{
+  background: white;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  clear:inline-end;
+  margin: 0;
+  padding: 0;
+  margin-top:30px;
+  border-top: 1px solid black;
+
+}
 
 .navbutton{
     float: left;
@@ -292,10 +324,10 @@ h1 {
 .menuprojet {
     box-sizing: border-box;
     position: fixed;
-    top: 70px;
+    top: 80px;
     width: 30%;
     height: 100%;
-    padding: 1em;
+    padding: 15px;
     z-index: 3;
     }
 
@@ -304,20 +336,23 @@ h1 {
  /* Descritpions des projets */
 
 .description {
-    top: 70px;
+    position: relative;
+    padding: 0;
+    top: 0;
+    margin: 0;
     width: 70%;
     left: 30%;
-    padding: 1em;
+    padding-left: 15px;
     border-top: none;
-    box-sizing: border-box;
+
     }
 
 .titrecolonne{
     width: 32%;
     display:inline-block;
-    height: auto;
     box-sizing: border-box;
-
+    vertical-align:top;
+    margin-bottom: 10px;
     }
 
 
@@ -326,7 +361,8 @@ h1 {
 
 .projets {
     position: relative;
-    padding: 1em 1em 1em 1em;
+    top: 0;
+    padding: 15px;
     left: 30%;
     width: 70%;
     border-top: 1px solid black;
@@ -337,7 +373,7 @@ h1 {
 
 
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:700px) {
 
 
 /* Texte */
@@ -419,6 +455,9 @@ h1 {
     position: relative;
     left: 0%;
     width: 100%;
+    padding: 0;
+    padding-left: 15px;
+    margin-bottom: 40px;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
     border-left: none;
@@ -427,8 +466,10 @@ h1 {
 .titrecolonne{
     width: 32%;
     display:inline-block;
-    height: auto;
-    }
+    box-sizing: border-box;
+    vertical-align:top;
+    margin-bottom: 10px;
+  }
 
 
 
@@ -436,11 +477,11 @@ h1 {
 
 .projets {
     position: relative;
+    top: 0px;
     left: 0%;
     width: 100%;
-    height: auto;
     border-left: none;
-    padding: 0em 1em 1em 1em;
+    padding: 50px,0,0,0;
     }
 
 }
