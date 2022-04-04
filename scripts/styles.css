@@ -193,12 +193,13 @@ bold{
     }
 
 .apropos{
-  float: right;
+  position: absolute;
+  z-index: -1;
+  box-sizing: border-box;
+  top: 45px;
   left: 40%;
-  top: 0px;
-  position: relative;
-  background-color: red;
-  height: 100%;
+  width: 50%;
+  padding-left: 15px;
 }
 
 .image {
