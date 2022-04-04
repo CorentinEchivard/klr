@@ -14,22 +14,21 @@
 
 <body>
 
-   <div class="navigation">
+  <div class="navigation">
 
-    <!-- Défilemet du texte -->
-<div class="defilement">
-    <span class="txt-def t1">— •claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — •claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — •claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz&nbsp;</span>
-    <span class="txt-def t2">— •claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — •claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — •claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz&nbsp;</span>
-</div>
+      <!-- Défilemet du texte -->
+  <div class="defilement">
+      <span class="txt-def t1">— • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz&nbsp;</span>
+      <span class="txt-def t2">— • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz&nbsp;</span>
+  </div>
 
-    <div class="menu">
-    <div class="navbutton nb1" style="border-left:none;"><a href="index.html">•claire laurent</a></div>
-    <div class="navbutton nb2"><a onclick="afficher()">index</a></div>
-    <div class="navbutton nb3"><a href="a-propos.html">à propos</a></div>
-    <div class="navbutton nb4"><a href="https://www.instagram.com/midi.douze/">instagram</a></div>
-    </div>
-    </div>
-<!-- Fin de navigation -->
+      <div class="menu">
+      <div class="navbutton nb1" style="border-left:none;"><a href="index.html">• claire laurent</a></div>
+      <div class="navbutton nb3"><a href="a-propos.html">à propos</a></div>
+      <div class="navbutton nb4"><a href="https://www.instagram.com/midi.douze/">instagram</a></div>
+      </div>
+      </div>
+  <!-- Fin de navigation -->
 
 
 
@@ -121,89 +120,7 @@
             </div>
 
 
-
-    <!-- Popup Index -->
-
-<div id="index" style="display:none;">
-    <h1><div><a class="croix" onclick="afficher()">X</a></div>
-
-    <div id="indextxt">
-
-      <div><a class="indexhover" href="atelier-geoffray.html">Atelier Geoffray
-      <img class="imageindex" src="links/zMiniature/min_passemoilemot_claire-laurent.jpg.jpg" alt="Atelier Geoffray">
-      </a></div>
-
-      <div><a class="indexhover" href="bonhomme.html">Bonhomme
-      <img class="imageindex" src="links/zMiniature/min_bonhomme_claire-laurent.jpg" alt="Bonhomme">
-      </a></div>
-
-      <div><a class="indexhover" href="cite-de-l-ia.html">Cité de l'IA
-      <img class="imageindex" src="links/zMiniature/min_citedelia_claire-laurent.png" alt="Cité de l'IA">
-      </a></div>
-
-      <div><a class="indexhover" href="de-fils-en-lumiere.html">De fils en lumière
-      <img class="imageindex" src="links/zMiniature/min_dfel_claire-laurent.jpg" alt="De fils en lumière">
-      </a></div>
-
-      <div><a class="indexhover" href="gsa.html">GSA
-      <img class="imageindex" src="links/zMiniature/min_gsa_claire-laurent.jpg" alt="GSA">
-      </a></div>
-
-      <div><a class="indexhover" href="les-soins-d-isaline.html">Les soins d'Isaline
-      <img class="imageindex" src="links/zMiniature/min_terrain_claire-laurent.jpg" alt="Les soins d'Isaline">
-      </a></div>
-
-      <div><a class="indexhover" href="monde-virtuel.html">Monde virtuel
-      <img class="imageindex" src="links/zMiniature/min_mondevirtuel_claire-laurent.JPG" alt="Monde virtuel">
-      </a></div>
-
-      <div><a class="indexhover" href="passe-moi-le-mot.html">Passe-moi le mot
-      <img class="imageindex" src="links/zMiniature/min_passemoilemot_claire-laurent.jpg.jpg" alt="Passe-moi le mot">
-      </a></div>
-
-      <div><a class="indexhover" href="realite-artificielle.html">Réalité artificielle
-      <img class="imageindex" src="links/zMiniature/min_realiteartificielle_claire-laurent.jpg" alt="Réalité artificielle">
-      </a></div>
-
-      <div><a class="indexhover" href="reste-calme.html">Reste calme !
-      <img class="imageindex" src="links/zMiniature/min_restecalme_claire-laurent-14.jpg" alt="Reste Calme!">
-      </a></div>
-
-      <div><a class="indexhover" href="terrain.html">Terrain
-      <img class="imageindex" src="links/zMiniature/min_terrain_claire-laurent.jpg" alt="Terrain">
-      </a></div>
-
-      <div><a class="indexhover" href="tohu-bohu.html">Tohu Bohu
-      <img class="imageindex" src="links/zMiniature/min_tohubohu_claire-laurent.JPG.jpg" alt="Tohu Bohu">
-      </a></div>
-
-</div><!-- Indextxt -->
-</h1>
-</div><!-- Index -->
-
-
-
-    <!--<h2>© 2022 <bold>Claire Laurent</bold> — Tous droits réservés<br>
-    Conception design et web : <bold>Corentin Echivard</bold><br>
-    Typographie : <bold>Cabinet Grotesk par <a href="https://www.fontshare.com/">Indian Type Foundry</a></bold>
-    </h2>-->
-
-
-
 <script>
-
-// afficher le popup
-
-function afficher() {
-  var x = document.getElementById("index");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-
 
 //hover sélection projet
 
@@ -226,12 +143,12 @@ function relief()
   for(i = 0; i < dnl.length;i++)
   {
     var x = dnl.item(i);
-    if(x.href == pageurl) 
+    if(x.href == pageurl)
     {
       x.style.color = "lightgrey";
-      x.style.textDecoration = "underline";
+      x.style.textDecoration = "underline 2px";
     }
-  }	
+  }
 }
 window.onload=relief;
 </script>
