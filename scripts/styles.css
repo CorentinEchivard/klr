@@ -98,7 +98,7 @@ bold{
     position: fixed;
     z-index: 2;
     width: 100%;
-    height: 60px;
+    height: 62px;
     border-bottom: 1px solid black;
 
     }
@@ -111,7 +111,7 @@ bold{
     display: flex;
     top: 0px;
     width: 100%;
-    height: 30px;
+    height: 31px;
     border-bottom: 1px solid black;
     vertical-align: center;
     position: fixed;
@@ -138,8 +138,8 @@ bold{
     font-size: 1.5em;
     line-height: 1.2em;
     width: 100%;
-    margin-top: 31px;
-    height: 30px;
+    margin-top: 30px;
+    height: 31px;
     clear:inline-end;
     }
 
@@ -175,9 +175,25 @@ bold{
     box-sizing: border-box;
     margin-bottom: 10px;
     }
+
 .titrecolonne{
     margin-bottom: 10px;
 }
+
+.descApropos {
+	display:none;
+    }
+
+.apropos{
+  	position: absolute;
+  	z-index: -1;
+  	box-sizing: border-box;
+  	top: 45px;
+  	left: 25%;
+  	width: 65%;
+  	padding-left: 15px;
+}
+
 
 .projets {
     position: absolute;
@@ -192,18 +208,8 @@ bold{
     border-left: 1px solid black;
     }
 
-.apropos{
-  position: absolute;
-  z-index: -1;
-  box-sizing: border-box;
-  top: 45px;
-  left: 40%;
-  width: 50%;
-  padding-left: 15px;
-}
-
 .image {
-    float: right;
+    float: left;
     max-width: 100%;
     margin-bottom: 15px;
     }
@@ -220,7 +226,7 @@ bold{
     width: 100%;
     height: auto;
     padding-bottom: 75px;
-    border-top: none;
+    border-top: 1px solid black;
     border-bottom: 1px solid black;
     }
 
@@ -345,7 +351,10 @@ h1 {
     left: 30%;
     padding-left: 15px;
     border-top: none;
+    }
 
+.descApropos {
+    display:none;
     }
 
 .titrecolonne{
@@ -369,8 +378,17 @@ h1 {
     border-top: 1px solid black;
     border-left: none;
     }
-}
 
+.apropos {
+    position: relative;
+    top: 0;
+    padding-left: 15px;
+    left: 30%;
+    width: 70%;
+    border-top: 1px solid black;
+    border-left: none;
+    }
+}
 
 
 
@@ -466,6 +484,12 @@ h1 {
     border-left: none;
     }
 
+
+.descApropos {
+    display: none;
+    }
+
+
 .titrecolonne{
     width: 32%;
     display:inline-block;
@@ -485,6 +509,16 @@ h1 {
     width: 100%;
     border-left: none;
     padding: 50px,0,0,0;
+    }
+
+.apropos {
+    position: relative;
+    top: 0px;
+    left: 0%;
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid black;
+    margin-top: 25px;
     }
 
 }

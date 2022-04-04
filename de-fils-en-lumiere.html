@@ -209,6 +209,7 @@ function afficher() {
 
 
 //hover sélection projet
+
 $('.indexhover').mousemove(function(e){
   $(this).find('.imageindex').addClass('visible');
   $(this).find('.imageindex').css({
@@ -218,6 +219,24 @@ $('.indexhover').mousemove(function(e){
   $(this).find('.imageindex').removeClass('visible');
 });
 
+
+//page active
+
+function relief()
+{
+  var pageurl = location.href;
+  var dnl = document.getElementsByTagName("a");
+  for(i = 0; i < dnl.length;i++)
+  {
+    var x = dnl.item(i);
+    if(x.href == pageurl) 
+    {
+      x.style.color = "lightgrey";
+      x.style.textDecoration = "underline";
+    }
+  }	
+}
+window.onload=relief;
 </script>
 </body>
 </html>
