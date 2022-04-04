@@ -53,7 +53,9 @@ a:link, a:visited {
     }
 
 a:hover {
-    color: lightgrey;
+    color: black;
+    text-decoration: underline black;
+    text-decoration-thickness: 2px;
     background-color: none;
     cursor: ne-resize;
     }
@@ -84,7 +86,7 @@ p   {
     }
 
 bold{
-    font-weight: 700;
+    font-family: 'CabinetGrotesk-Bold';
     }
 
 
@@ -98,8 +100,7 @@ bold{
     position: fixed;
     z-index: 2;
     width: 100%;
-    height: 62px;
-    border-bottom: 1px solid black;
+    height: 60px;
 
     }
 
@@ -111,8 +112,7 @@ bold{
     display: flex;
     top: 0px;
     width: 100%;
-    height: 31px;
-    border-bottom: 1px solid black;
+    height: 30px;
     vertical-align: center;
     position: fixed;
     }
@@ -136,17 +136,18 @@ bold{
 
 .menu{
     font-size: 1.5em;
-    line-height: 1.2em;
     width: 100%;
     margin-top: 30px;
-    height: 31px;
+    height: 30px;
     clear:inline-end;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     }
 
 .navbutton{
     float: left;
     text-align: center;
-    width: 24.9%;
+    width: 33%;
     border-left: 1px solid black;
     }
 
@@ -215,34 +216,6 @@ bold{
     }
 
 
-
-/* Menu index */
-
-#index{
-    z-index: 4;
-    position: fixed;
-    background: white;
-    top: 60px;
-    width: 100%;
-    height: auto;
-    padding-bottom: 75px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    }
-
-#indextxt{
-    margin-left: 90px;
-    top: 30px;
-    padding-top: 0px;
-    }
-
-.croix{
-    margin-left:30px;
-    padding-top: 0;
-    }
-
-
-
 /* Images index */
 
 .imageindex {
@@ -276,14 +249,15 @@ h1 {
     line-height: 1.2em;
     }
 
+
+
 /* Menu de navigation */
 
 .navigation {
     background: white;
     position: relative;
-    border-bottom: none;
     z-index: 4;
-    height: 90px;
+    height: 60px;
     }
 
 .defilement{
@@ -293,23 +267,19 @@ h1 {
 .menu{
   background: white;
   position: fixed;
-  height: 60px;
+  height: 30px;
   width: 100%;
   clear:inline-end;
+  top:30px;
   margin: 0;
-  padding: 0;
-  margin-top:30px;
-  border-top: 1px solid black;
-
 }
 
 .navbutton{
     float: left;
     display: inline-block;
     text-align: center;
-    width: 49.8%;
+    width: 33%;
     border-right: 1px solid black;
-    border-bottom: 1px solid black;
     border-left:none;
     }
 
@@ -320,10 +290,6 @@ h1 {
     border-right: none;
     }
 
-#index{
-    border-top: none;
-    z-index: 4;
-    }
 
 
 /*  Menu visible des projets */
@@ -331,7 +297,7 @@ h1 {
 .menuprojet {
     box-sizing: border-box;
     position: fixed;
-    top: 80px;
+    top: 30px;
     width: 30%;
     height: 100%;
     padding: 15px;
@@ -394,7 +360,6 @@ h1 {
 
 @media screen and (max-width:700px) {
 
-
 /* Texte */
 
 h1 {
@@ -426,6 +391,9 @@ h1 {
     z-index: 10;
     }
 
+.txt-def {
+    font-size: 1.25em;
+    }
 
 
  /* Menu de navigation */
@@ -455,11 +423,6 @@ h1 {
     width: 100%;
     border-right: none;
     text-align: left;
-    }
-
-#index{
-    top: 90px;
-    border-top: 1px solid black;
     }
 
 .imageindex {
