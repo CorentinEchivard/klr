@@ -14,7 +14,12 @@
 
 <body>
 
-  <div class="navigation">
+<!-- Curseur -->
+<div class="wrapper"><div class="cursor"></div></div>
+
+
+
+<div class="navigation">
 
       <!-- Défilemet du texte -->
   <div class="defilement">
@@ -98,13 +103,13 @@
             <div class="titrecolonne">Année<br>
                 <bold>2019</bold></div>
             <div class="titrecolonne">Usage<br>
-                <bold>identité visuelle — étude de cas</bold></div>
+                <bold>identité visuelle • Étude de cas</bold></div>
             <div class="titrecolonne">Localisation<br>
                 <bold>Lille</bold></div>
             <div class="titrecolonne">Design<br>
                 <bold>Claire Laurent</bold></div>
             <div class="titrecolonne">Typographie<br>
-                <bold>Helvetica - Founders Grotesk</bold></div>
+                <bold>Helvetica • Founders Grotesk</bold></div>
             </h2></div>
 
              <!-- Affichage projets -->
@@ -123,6 +128,25 @@
 
 
 <script>
+
+//Custom cursor
+
+var $cursor = $('.cursor');
+
+function moveCursor(e) {
+  $cursor.addClass('is-moving');
+  $cursor.css({"top": e.pageY, "left": e.pageX});
+
+  clearTimeout(timer2);
+
+   var timer2 = setTimeout(function() {
+       $cursor.removeClass('is-moving');
+   }, 300);
+}
+
+$(window).on('mousemove', moveCursor);
+
+
 
 //hover sélection projet
 
@@ -148,7 +172,7 @@ function relief()
     if(x.href == pageurl)
     {
       x.style.color = "lightgrey";
-      x.style.textDecoration = "underline 2px";
+      x.style.textDecoration = "underline";
     }
   }
 }

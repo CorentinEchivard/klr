@@ -14,6 +14,11 @@
 
 <body>
 
+<!-- Curseur -->
+<div class="wrapper"><div class="cursor"></div></div>
+
+
+
   <div class="navigation">
 
       <!-- Défilemet du texte -->
@@ -120,6 +125,25 @@
 
 <script>
 
+//Custom cursor
+
+var $cursor = $('.cursor');
+
+function moveCursor(e) {
+  $cursor.addClass('is-moving');
+  $cursor.css({"top": e.pageY, "left": e.pageX});
+
+  clearTimeout(timer2);
+
+   var timer2 = setTimeout(function() {
+       $cursor.removeClass('is-moving');
+   }, 300);
+}
+
+$(window).on('mousemove', moveCursor);
+
+
+
 //hover sélection projet
 
 $('.indexhover').mousemove(function(e){
@@ -144,7 +168,7 @@ function relief()
     if(x.href == pageurl)
     {
       x.style.color = "lightgrey";
-      x.style.textDecoration = "underline 2px";
+      x.style.textDecoration = "underline";
     }
   }
 }

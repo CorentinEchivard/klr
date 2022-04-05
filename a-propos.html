@@ -14,9 +14,15 @@
 
 <body>
 
+<!-- Curseur -->
+<div class="wrapper"><div class="cursor"></div></div>
+
+
+
   <div class="navigation">
 
       <!-- Défilemet du texte -->
+
   <div class="defilement">
       <span class="txt-def t1">— • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz&nbsp;</span>
       <span class="txt-def t2">— • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz&nbsp;</span>
@@ -108,14 +114,33 @@
                   <a href="mailto:contact@claire-laurent.xyz">contact@claire-laurent.xyz</a><br>
                   +33(0)6 45 75 87 85<br>
                   <br>
-                  © 2022 Claire Laurent — Tous droits réservés<br>
-                  Conception design et web : <a href="http://corentinechivard.com/">Corentin Echivard</a><br>
-                  Typographie : Cabinet Grotesk par <a href="https://www.fontshare.com/">Indian Type Foundry</a>
+                  © 2022 Claire Laurent • Tous droits réservés<br>
+                  Conception design et web • <a href="http://corentinechivard.com/">Corentin Echivard</a><br>
+                  Typographie • Cabinet Grotesk par <a href="https://www.fontshare.com/">Indian Type Foundry</a>
               </h1>
             </div>
 
 
 <script>
+
+//Custom cursor
+
+var $cursor = $('.cursor');
+
+function moveCursor(e) {
+  $cursor.addClass('is-moving');
+  $cursor.css({"top": e.pageY, "left": e.pageX});
+
+  clearTimeout(timer2);
+
+   var timer2 = setTimeout(function() {
+       $cursor.removeClass('is-moving');
+   }, 300);
+}
+
+$(window).on('mousemove', moveCursor);
+
+
 
 //hover sélection projet
 
@@ -141,7 +166,8 @@ function relief()
     if(x.href == pageurl)
     {
       x.style.color = "lightgrey";
-      x.style.textDecoration = "underline 2px";
+      x.style.textDecoration = "underline";
+
     }
   }
 }

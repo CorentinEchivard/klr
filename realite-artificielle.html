@@ -14,21 +14,26 @@
 
 <body>
 
-  <div class="navigation">
+<!-- Curseur -->
+<div class="wrapper"><div class="cursor"></div></div>
 
-      <!-- Défilemet du texte -->
-  <div class="defilement">
-      <span class="txt-def t1">— • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz&nbsp;</span>
-      <span class="txt-def t2">— • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz&nbsp;</span>
-  </div>
 
-      <div class="menu">
-      <div class="navbutton nb1" style="border-left:none;"><a href="index.html">• claire laurent</a></div>
-      <div class="navbutton nb3"><a href="a-propos.html">à propos</a></div>
-      <div class="navbutton nb4"><a href="https://www.instagram.com/midi.douze/">instagram</a></div>
-      </div>
-      </div>
-  <!-- Fin de navigation -->
+
+<div class="navigation">
+
+    <!-- Défilemet du texte -->
+<div class="defilement">
+    <span class="txt-def t1">— • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz&nbsp;</span>
+    <span class="txt-def t2">— • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz — • claire laurent — bienvenue sur mon portfolio — claire-laurent.xyz&nbsp;</span>
+</div>
+
+    <div class="menu">
+    <div class="navbutton nb1" style="border-left:none;"><a href="index.html">• claire laurent</a></div>
+    <div class="navbutton nb3"><a href="a-propos.html">à propos</a></div>
+    <div class="navbutton nb4"><a href="https://www.instagram.com/midi.douze/">instagram</a></div>
+    </div>
+    </div>
+<!-- Fin de navigation -->
 
 
 
@@ -122,6 +127,25 @@
 
 <script>
 
+//Custom cursor
+
+var $cursor = $('.cursor');
+
+function moveCursor(e) {
+  $cursor.addClass('is-moving');
+  $cursor.css({"top": e.pageY, "left": e.pageX});
+
+  clearTimeout(timer2);
+
+   var timer2 = setTimeout(function() {
+       $cursor.removeClass('is-moving');
+   }, 300);
+}
+
+$(window).on('mousemove', moveCursor);
+
+
+
 //hover sélection projet
 
 $('.indexhover').mousemove(function(e){
@@ -146,7 +170,7 @@ function relief()
     if(x.href == pageurl)
     {
       x.style.color = "lightgrey";
-      x.style.textDecoration = "underline 2px";
+      x.style.textDecoration = "underline";
     }
   }
 }

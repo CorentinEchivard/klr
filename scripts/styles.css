@@ -6,6 +6,15 @@
   font-family: 'CabinetGrotesk-Regular';
   src: url('../fonts/CabinetGrotesk-Regular.woff2') format('woff2');
        font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'CabinetGrotesk-Medium';
+  src: url('../fonts/CabinetGrotesk-Medium.woff2') format('woff2');
+       font-weight: 500;
+       font-display: swap;
        font-style: normal;
 }
 
@@ -13,16 +22,52 @@
     font-family: 'CabinetGrotesk-Bold';
     src: url('../fonts/CabinetGrotesk-Bold.woff2') format('woff2');
        font-weight: 700;
+       font-display: swap;
        font-style: normal;
     }
 
 
 
 body {
-    font-family: CabinetGrotesk-Regular, Arial, "sans-serif";
+  	font-family: 'CabinetGrotesk-Regular';
+    font-weight: 400;
     margin: 0px;
     display: block;
-    }
+    background: white;
+}
+
+
+
+/* Custom cursor */
+
+* {
+  cursor:none;
+}
+
+.cursor {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -50%;
+  left: -50%;
+  margin: -15px 0 0 -15px;
+  border-radius: 50%;
+  background-color: white;
+  backface-visibility: hidden;
+  transition: transform 0.2s ease-out;
+  mix-blend-mode: difference;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.cursor.is-moving {
+  transform: scale(0.8);
+}
+
+.content_cursor {
+  position:relative;
+  height:100%;
+}
 
 
 
@@ -32,9 +77,11 @@ html::-webkit-scrollbar {
     width: 10px;
     background-color: white;
     }
+
 html::-webkit-scrollbar-thumb {
     background: black;
     }
+
 
 /* Séléction texte */
 
@@ -86,7 +133,8 @@ p   {
     }
 
 bold{
-    font-family: 'CabinetGrotesk-Bold';
+    text-decoration: underline black;
+    text-decoration-thickness: 2px;
     }
 
 
@@ -101,8 +149,26 @@ bold{
     z-index: 2;
     width: 100%;
     height: 60px;
-
     }
+
+.menu{
+	background: white;
+    font-size: 1.5em;
+    width: 100%;
+    margin-top: 30px;
+    height: 30px;
+    clear:inline-end;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    }
+
+.navbutton{
+    float: left;
+    text-align: center;
+    width: 33%;
+    border-left: 1px solid black;
+    }
+
 
 /* Défilement texte */
 
@@ -134,23 +200,6 @@ bold{
     }
     }
 
-.menu{
-    font-size: 1.5em;
-    width: 100%;
-    margin-top: 30px;
-    height: 30px;
-    clear:inline-end;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    }
-
-.navbutton{
-    float: left;
-    text-align: center;
-    width: 33%;
-    border-left: 1px solid black;
-    }
-
 
 
 /* Menu projets */
@@ -164,6 +213,19 @@ bold{
     height: 100%;
     padding: 15px;
     border-right: 1px solid black;
+    }
+
+.homepage{
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 30px;
+    color: black;
+    font-weight: 400;
+    font-size: 6em;
+    position: relative;
+    width: 100%;
+  	text-align: center;
+  	border: none;
     }
 
 .description {
@@ -217,6 +279,10 @@ bold{
 
 
 /* Images index */
+.divhome{
+    width: 100%;
+    border-bottom: 1px solid black;
+}
 
 .imageindex {
     position: absolute;
@@ -225,9 +291,24 @@ bold{
     pointer-events:none;
     width: 400px;
     height: auto;
+    transform: translateX(10%) translateY(-50%);
+
+    }
+
+.imagehomepage {
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    pointer-events:none;
+    width: 600px;
+    height: auto;
+    transform: translateX(0%) translateY(-50%);
     }
 
 .imageindex.visible {
+    visibility: visible;
+    }
+.imagehomepage.visible {
     visibility: visible;
     }
 
@@ -428,7 +509,7 @@ h1 {
 .imageindex {
     width: 200px;
     height: auto;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(10%) translateY(-100%);
     }
 
 
