@@ -14,6 +14,11 @@
 
 <body>
 
+<!-- Curseur -->
+<div class="wrapper"><div class="cursor"></div></div>
+
+
+
   <div class="navigation">
 
       <!-- Défilemet du texte -->
@@ -98,11 +103,11 @@
             <div class="titrecolonne">Année<br>
                 <bold>2016</bold></div>
             <div class="titrecolonne">Usage<br>
-                <bold>Installation numérique et affiche</bold></div>
+                <bold>Installation numérique • Affiche</bold></div>
             <div class="titrecolonne">Localisation<br>
-                <bold>Valence - Théâtre de la ville de Valence</bold></div>
+                <bold>Valence • Théâtre de la ville de Valence</bold></div>
             <div class="titrecolonne">Design<br>
-                <bold>Claire Laurent - Thibaud Allemand</bold></div>
+                <bold>Claire Laurent • Thibaud Allemand</bold></div>
             <div class="titrecolonne">Typographie<br>
                 <bold>Neue Haas Grotesk Display Pro</bold></div>
             </h2></div>
@@ -125,6 +130,25 @@
 
 <script>
 
+//Custom cursor
+
+var $cursor = $('.cursor');
+
+function moveCursor(e) {
+  $cursor.addClass('is-moving');
+  $cursor.css({"top": e.pageY, "left": e.pageX});
+
+  clearTimeout(timer2);
+
+   var timer2 = setTimeout(function() {
+       $cursor.removeClass('is-moving');
+   }, 300);
+}
+
+$(window).on('mousemove', moveCursor);
+
+
+
 //hover sélection projet
 
 $('.indexhover').mousemove(function(e){
@@ -134,7 +158,7 @@ $('.indexhover').mousemove(function(e){
     });
 }).mouseleave(function(){
   $(this).find('.imageindex').removeClass('visible');
-});
+  });
 
 
 //page active
@@ -149,7 +173,7 @@ function relief()
     if(x.href == pageurl)
     {
       x.style.color = "lightgrey";
-      x.style.textDecoration = "underline 2px";
+      x.style.textDecoration = "underline";
     }
   }
 }
