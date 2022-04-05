@@ -1,47 +1,41 @@
 @charset "utf-8";
+
 /* CSS Document */
-
-
 @font-face {
   font-family: 'CabinetGrotesk-Regular';
   src: url('../fonts/CabinetGrotesk-Regular.woff2') format('woff2');
-       font-weight: 400;
-       font-display: swap;
-       font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'CabinetGrotesk-Medium';
   src: url('../fonts/CabinetGrotesk-Medium.woff2') format('woff2');
-       font-weight: 500;
-       font-display: swap;
-       font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'CabinetGrotesk-Bold';
-    src: url('../fonts/CabinetGrotesk-Bold.woff2') format('woff2');
-       font-weight: 700;
-       font-display: swap;
-       font-style: normal;
-    }
-
-
-
-body {
-  	font-family: 'CabinetGrotesk-Regular';
-    font-weight: 400;
-    margin: 0px;
-    display: block;
-    background: white;
+  font-family: 'CabinetGrotesk-Bold';
+  src: url('../fonts/CabinetGrotesk-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
 }
 
-
+body {
+  font-family: 'CabinetGrotesk-Regular';
+  font-weight: 400;
+  margin: 0px;
+  display: block;
+  background: white;
+}
 
 /* Custom cursor */
-
 * {
-  cursor:none;
+  cursor: none;
 }
 
 .cursor {
@@ -65,331 +59,325 @@ body {
 }
 
 .content_cursor {
-  position:relative;
-  height:100%;
+  position: relative;
+  height: 100%;
 }
 
-
-
 /* Scrollbar */
-
 html::-webkit-scrollbar {
-    width: 10px;
-    background-color: white;
-    }
+  width: 10px;
+  background-color: white;
+}
 
 html::-webkit-scrollbar-thumb {
-    background: black;
-    }
-
+  background: black;
+}
 
 /* Séléction texte */
-
 *::selection {
-    color: white;
-    background-color: black;
-    }
-
-
+  color: white;
+  background-color: black;
+}
 
 /* Liens */
-
 a:link, a:visited {
-    color: black;
-    text-decoration: none;
-    }
+  color: black;
+  text-decoration: none;
+}
 
 a:hover {
-    color: black;
-    text-decoration: underline black;
-    text-decoration-thickness: 2px;
-    background-color: none;
-    cursor: ne-resize;
-    }
-
-
+  color: black;
+  text-decoration: underline black;
+  text-decoration-thickness: 2px;
+  background-color: none;
+  cursor: ne-resize;
+}
 
 /* Texte */
-
 h1 {
-    color: black;
-    font-weight: 400;
-    font-size: 2.5em;
-    line-height: 1em;
-    }
+  color: black;
+  font-weight: 400;
+  font-size: 2.5em;
+  line-height: 1em;
+}
 
 h2 {
-    color: black;
-    font-weight: 400;
-    font-size: 1.5em;
-    line-height: 1.2em;
-    }
+  color: black;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
 
-p   {
-    font-weight: 400;
-    font-size: 1.2em;
-    line-height: 24px;
-    text-align: left;
-    }
+p {
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 24px;
+  text-align: left;
+}
 
-bold{
-    text-decoration: underline black;
-    text-decoration-thickness: 2px;
-    }
-
-
-
+bold {
+  text-decoration: underline black;
+  text-decoration-thickness: 1px;
+}
 
 /* Menu de navigation */
-
 .navigation {
-    background: white;
-    display: block;
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    height: 60px;
-    }
+  background: white;
+  display: block;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 60px;
+}
 
-.menu{
-	background: white;
-    font-size: 1.5em;
-    width: 100%;
-    margin-top: 30px;
-    height: 30px;
-    clear:inline-end;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    }
+.menu {
+  background: white;
+  font-size: 1.5em;
+  width: 100%;
+  margin-top: 30px;
+  height: 30px;
+  clear: inline-end;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
 
-.navbutton{
-    float: left;
-    text-align: center;
-    width: 33%;
-    border-left: 1px solid black;
-    }
-
+.navbutton {
+  float: left;
+  text-align: center;
+  width: 33%;
+  border-left: 1px solid black;
+}
 
 /* Défilement texte */
-
 .defilement {
-    background: white;
-    overflow: hidden;
-    display: flex;
-    top: 0px;
-    width: 100%;
-    height: 30px;
-    vertical-align: center;
-    position: fixed;
-    }
+  background: white;
+  overflow: hidden;
+  display: flex;
+  top: 0px;
+  width: 100%;
+  height: 30px;
+  vertical-align: center;
+  position: fixed;
+}
 
-.defilement:hover{
-    color: lightgrey;
-    }
+.defilement:hover {
+  color: lightgrey;
+}
 
 .txt-def {
-    white-space: nowrap;
-    font-size: 1.5em;
-    animation: scrollTxt 30s linear infinite;
-    }
+  white-space: nowrap;
+  font-size: 1.5em;
+  animation: scrollTxt 30s linear infinite;
+}
 
 @keyframes scrollTxt {
-    0%{ transform: translate(0%, 0);
-    }
-    100% { transform: translate(-100%, 0);
-    }
-    }
+  0% {
+    transform: translate(0%, 0);
+  }
 
-
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
 
 /* Menu projets */
-
 .menuprojet {
-    z-index: 1;
-    box-sizing: border-box;
-    position:fixed;
-    top: 30px;
-    width: 24.95%;
-    height: 100%;
-    padding: 15px;
-    border-right: 1px solid black;
-    }
+  z-index: 1;
+  box-sizing: border-box;
+  position: fixed;
+  top: 30px;
+  width: 24.95%;
+  height: 100%;
+  padding: 15px;
+  border-right: 1px solid black;
+}
 
-.homepage{
-    padding-right: 0;
-    padding-left: 0;
-    padding-top: 30px;
-    color: black;
-    font-weight: 400;
-    font-size: 6em;
-    position: relative;
-    width: 100%;
-  	text-align: center;
-  	border: none;
-    }
+.homepage {
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 30px;
+  color: black;
+  font-weight: 400;
+  font-size: 6em;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  border: none;
+}
 
 .description {
-    z-index: 0;
-    position: fixed;
-    width: 15%;
-    top: 30px;
-    left: 25%;
-    padding: 15px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    }
+  z-index: 0;
+  position: fixed;
+  width: 15%;
+  top: 30px;
+  left: 25%;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
 
-.titrecolonne{
-    margin-bottom: 10px;
+.titrecolonne {
+  margin-bottom: 10px;
 }
 
 .descApropos {
-	display:none;
-    }
-
-.apropos{
-  	position: absolute;
-  	z-index: -1;
-  	box-sizing: border-box;
-  	top: 45px;
-  	left: 25%;
-  	width: 65%;
-  	padding-left: 15px;
+  display: none;
 }
 
+.apropos {
+  position: absolute;
+  z-index: -1;
+  box-sizing: border-box;
+  top: 45px;
+  left: 25%;
+  width: 65%;
+  padding-left: 15px;
+}
 
 .projets {
-    position: absolute;
-    z-index: -1;
-    box-sizing: border-box;
-    top: 60px;
-    left: 40%;
-    height: auto;
-    width: 60%;
-    padding: 15px;
-    padding-bottom: 0;
-    border-left: 1px solid black;
-    }
+  position: absolute;
+  z-index: -1;
+  box-sizing: border-box;
+  top: 60px;
+  left: 40%;
+  height: auto;
+  width: 60%;
+  padding: 15px;
+  padding-bottom: 0;
+  border-left: 1px solid black;
+}
 
 .image {
-    float: left;
-    max-width: 100%;
-    margin-bottom: 15px;
-    }
-
+  float: left;
+  max-width: 100%;
+  margin-bottom: 15px;
+}
 
 /* Images index */
-.divhome{
-    width: 100%;
-    border-bottom: 1px solid black;
+.divhome {
+  width: 100%;
+  border-bottom: 1px solid black;
 }
 
 .imageindex {
-    position: absolute;
-    z-index: 1;
-    visibility: hidden;
-    pointer-events:none;
-    width: 400px;
-    height: auto;
-    transform: translateX(10%) translateY(-50%);
-
-    }
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  pointer-events: none;
+  width: 400px;
+  height: auto;
+  transform: translateX(10%) translateY(-50%);
+}
 
 .imagehomepage {
-    position: absolute;
-    z-index: 1;
-    visibility: hidden;
-    pointer-events:none;
-    width: 600px;
-    height: auto;
-    transform: translateX(0%) translateY(-50%);
-    }
+  position: absolute;
+  z-index: 2;
+  visibility: hidden;
+  pointer-events: none;
+  width: 550px;
+  height: auto;
+  transform: translateX(0%) translateY(-50%);
+}
 
 .imageindex.visible {
-    visibility: visible;
-    }
+  visibility: visible;
+}
+
 .imagehomepage.visible {
-    visibility: visible;
-    }
-
-
+  visibility: visible;
+}
 
 /* Responsive Tablette */
-
 @media screen and (min-width:701px) and (max-width:1000px) {
 
-/* Texte */
-
-h1 {
+  /* Texte */
+  h1 {
     font-size: 2em;
     line-height: 1em;
-    }
+  }
 
- h2 {
+  h2 {
     font-size: 1.5em;
     line-height: 1.2em;
-    }
+  }
 
-
-
-/* Menu de navigation */
-
-.navigation {
+  /* Menu de navigation */
+  .navigation {
     background: white;
     position: relative;
     z-index: 4;
     height: 60px;
-    }
+  }
 
-.defilement{
+  .defilement {
     position: fixed;
-}
+  }
 
-.menu{
-  background: white;
-  position: fixed;
-  height: 30px;
-  width: 100%;
-  clear:inline-end;
-  top:30px;
-  margin: 0;
-}
+  .menu {
+    background: white;
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    clear: inline-end;
+    top: 30px;
+    margin: 0;
+  }
 
-.navbutton{
+  .navbutton {
     float: left;
     display: inline-block;
     text-align: center;
     width: 33%;
     border-right: 1px solid black;
-    border-left:none;
-    }
+    border-left: none;
+  }
 
-.nb2{
+  .nb2 {
     border-right: none;
-    }
-.nb4{
+  }
+
+  .nb4 {
     border-right: none;
-    }
+  }
 
-
-
-/*  Menu visible des projets */
-
-.menuprojet {
+  /*  Menu visible des projets */
+  .menuprojet {
     box-sizing: border-box;
     position: fixed;
-    top: 30px;
+    top: 40px;
     width: 30%;
     height: 100%;
     padding: 15px;
     z-index: 3;
-    }
+  }
 
+  .homepage {
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 0px;
+    top: 0px;
+    color: black;
+    font-weight: 400;
+    font-size: 60px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    border: none;
+  }
 
+  .imagehomepage {
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    pointer-events: none;
+    width: 350px;
+    height: auto;
+    transform: translateX(-50%) translateY(-75%);
+    z-index: 1000;
+  }
 
- /* Descritpions des projets */
-
-.description {
+  /* Descritpions des projets */
+  .description {
     position: relative;
     padding: 0;
     top: 0;
@@ -398,25 +386,22 @@ h1 {
     left: 30%;
     padding-left: 15px;
     border-top: none;
-    }
+  }
 
-.descApropos {
-    display:none;
-    }
+  .descApropos {
+    display: none;
+  }
 
-.titrecolonne{
+  .titrecolonne {
     width: 32%;
-    display:inline-block;
+    display: inline-block;
     box-sizing: border-box;
-    vertical-align:top;
+    vertical-align: top;
     margin-bottom: 10px;
-    }
+  }
 
-
-
-/* Bloc image des projets */
-
-.projets {
+  /* Bloc image des projets */
+  .projets {
     position: relative;
     top: 0;
     padding: 15px;
@@ -424,9 +409,9 @@ h1 {
     width: 70%;
     border-top: 1px solid black;
     border-left: none;
-    }
+  }
 
-.apropos {
+  .apropos {
     position: relative;
     top: 0;
     padding-left: 15px;
@@ -434,30 +419,24 @@ h1 {
     width: 70%;
     border-top: 1px solid black;
     border-left: none;
-    }
+  }
 }
-
-
 
 @media screen and (max-width:700px) {
 
-/* Texte */
-
-h1 {
+  /* Texte */
+  h1 {
     font-size: 2em;
     line-height: 1em;
-    }
+  }
 
- h2 {
+  h2 {
     font-size: 1.25em;
     line-height: 1.2em;
-    }
+  }
 
-
-
-/* Défilement texte */
-
-.defilement {
+  /* Défilement texte */
+  .defilement {
     font-size: 1.25em;
     line-height: 1.2em;
     background: white;
@@ -470,53 +449,73 @@ h1 {
     vertical-align: center;
     position: fixed;
     z-index: 10;
-    }
+  }
 
-.txt-def {
+  .txt-def {
     font-size: 1.25em;
-    }
+  }
 
-
- /* Menu de navigation */
-
-.navigation {
+  /* Menu de navigation */
+  .navigation {
     background: white;
     position: relative;
     z-index: 4;
     width: 100%;
     border-bottom: none;
     height: auto;
-    }
+  }
 
-.navbutton{
+  .navbutton {
     width: 100%;
     border-right: none;
-    border-left:none;
+    border-left: none;
     border-bottom: 1px solid black;
-    }
+  }
 
-
-/*  Menu visible des projets */
-.menuprojet {
+  /*  Menu visible des projets */
+  .menuprojet {
     box-sizing: border-box;
-    position:relative;
+    position: relative;
     display: block;
     width: 100%;
     border-right: none;
     text-align: left;
-    }
+  }
 
-.imageindex {
+  .imageindex {
     width: 200px;
     height: auto;
     transform: translateX(10%) translateY(-100%);
-    }
+  }
 
+  .homepage {
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 0px;
+    top: 0px;
+    color: black;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 65px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    border: none;
+  }
 
+  .imagehomepage {
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    pointer-events: none;
+    width: 225px;
+    height: auto;
+    transform: translateX(-50%) translateY(-80%);
+    z-index: 2;
+  }
 
- /* Descritpions des projets */
-
-.description {
+  /* Descritpions des projets */
+  .description {
     position: relative;
     left: 0%;
     width: 100%;
@@ -526,36 +525,31 @@ h1 {
     border-bottom: 1px solid black;
     border-top: 1px solid black;
     border-left: none;
-    }
+  }
 
-
-.descApropos {
+  .descApropos {
     display: none;
-    }
+  }
 
-
-.titrecolonne{
+  .titrecolonne {
     width: 32%;
-    display:inline-block;
+    display: inline-block;
     box-sizing: border-box;
-    vertical-align:top;
+    vertical-align: top;
     margin-bottom: 10px;
   }
 
-
-
-/* Bloc image des projets */
-
-.projets {
+  /* Bloc image des projets */
+  .projets {
     position: relative;
     top: 0px;
     left: 0%;
     width: 100%;
     border-left: none;
-    padding: 50px,0,0,0;
-    }
+    padding: 50px, 0, 0, 0;
+  }
 
-.apropos {
+  .apropos {
     position: relative;
     top: 0px;
     left: 0%;
@@ -563,6 +557,5 @@ h1 {
     border-left: none;
     border-top: 1px solid black;
     margin-top: 25px;
-    }
-
+  }
 }
