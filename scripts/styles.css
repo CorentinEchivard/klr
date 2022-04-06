@@ -198,7 +198,7 @@ bold {
   padding-top: 30px;
   color: black;
   font-weight: 400;
-  font-size: 6em;
+  font-size: 5.5em;
   position: relative;
   width: 100%;
   text-align: center;
@@ -274,9 +274,9 @@ bold {
   z-index: 2;
   visibility: hidden;
   pointer-events: none;
-  width: 550px;
+  width: 27%;
   height: auto;
-  transform: translateX(0%) translateY(-50%);
+  transform: translateX(10%) translateY(-50%);
 }
 
 .imageindex.visible {
@@ -307,6 +307,8 @@ bold {
     position: relative;
     z-index: 4;
     height: 60px;
+    border-bottom: none;
+
   }
 
   .defilement {
@@ -479,13 +481,13 @@ bold {
     display: block;
     width: 100%;
     border-right: none;
-    text-align: left;
+    text-align: center;
   }
 
   .imageindex {
     width: 200px;
     height: auto;
-    transform: translateX(10%) translateY(-100%);
+    transform: translateX(-50%) translateY(-125%);
   }
 
   .homepage {
@@ -495,8 +497,8 @@ bold {
     top: 0px;
     color: black;
     font-weight: 400;
-    font-size: 35px;
-    line-height: 65px;
+    font-size: 30px;
+    line-height: 55px;
     position: relative;
     width: 100%;
     text-align: center;
@@ -508,7 +510,7 @@ bold {
     z-index: 1;
     visibility: hidden;
     pointer-events: none;
-    width: 225px;
+    width: 200px;
     height: auto;
     transform: translateX(-50%) translateY(-80%);
     z-index: 2;
