@@ -125,7 +125,7 @@ bold {
   background: white;
   display: block;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   height: 60px;
 }
@@ -182,14 +182,13 @@ bold {
 
 /* Menu projets */
 .menuprojet {
-  z-index: 1;
+  z-index: 3;
   box-sizing: border-box;
   position: fixed;
   top: 30px;
   width: 24.95%;
   height: 100%;
   padding: 15px;
-  border-right: 1px solid black;
 }
 
 .homepage {
@@ -209,11 +208,14 @@ bold {
   z-index: 0;
   position: fixed;
   width: 15%;
-  top: 30px;
+  height: 100%;
+  top: 35px;
   left: 25%;
   padding: 15px;
   box-sizing: border-box;
   margin-bottom: 10px;
+  border-left: 1px solid black;
+
 }
 
 .titrecolonne {
@@ -305,7 +307,7 @@ bold {
   .navigation {
     background: white;
     position: relative;
-    z-index: 4;
+    z-index: 5;
     height: 60px;
     border-bottom: none;
 
@@ -350,7 +352,9 @@ bold {
     width: 30%;
     height: 100%;
     padding: 15px;
-    z-index: 3;
+    z-index: 4;
+    border-right: 1px solid black;
+
   }
 
   .homepage {
@@ -388,6 +392,7 @@ bold {
     left: 30%;
     padding-left: 15px;
     border-top: none;
+    border-left: none;
   }
 
   .descApropos {
@@ -428,8 +433,8 @@ bold {
 
   /* Texte */
   h1 {
-    font-size: 2em;
-    line-height: 1em;
+    font-size: 1.9em;
+    line-height: 1.2em;
   }
 
   h2 {
@@ -481,6 +486,8 @@ bold {
     display: block;
     width: 100%;
     border-right: none;
+    border-top: none;
+    border-bottom: none;
     text-align: center;
   }
 
@@ -503,17 +510,17 @@ bold {
     width: 100%;
     text-align: center;
     border: none;
+    z-index: 5;
   }
 
   .imagehomepage {
     position: absolute;
-    z-index: 1;
+    z-index: 5;
     visibility: hidden;
     pointer-events: none;
     width: 200px;
     height: auto;
     transform: translateX(-50%) translateY(-80%);
-    z-index: 2;
   }
 
   /* Descritpions des projets */
