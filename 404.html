@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="links/favicon.ico">
+  <link rel="stylesheet" href="scripts/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <title>• claire laurent</title>
+</head>
+
+
+
+<body>
+
+  <!-- Curseur -->
+  <div class="wrapper">
+    <div class="cursor"></div>
+  </div>
+
+
+
+  <div class="full">
+
+  </div>
+  <div class="notfound">404<br>
+    <div class="nftxt"> Cette page ne correspond à aucun contenu<br>
+      <a href="index.html">> Revenir sur la page d'accueil <</a>
+    </div>
+  </div>
+
+
+
+  <script>
+    //Custom cursor
+
+    var $cursor = $('.cursor');
+
+    function moveCursor(e) {
+      $cursor.addClass('is-moving');
+      $cursor.css({
+        "top": e.pageY,
+        "left": e.pageX
+      });
+
+      clearTimeout(timer2);
+
+      var timer2 = setTimeout(function() {
+        $cursor.removeClass('is-moving');
+      }, 300);
+    }
+
+    $(window).on('mousemove', moveCursor);
+
+
+
+    //hover sélection projet
+
+    $('.indexhover').mousemove(function(e) {
+      $(this).find('.imagehomepage').addClass('visible');
+      $(this).find('.imagehomepage').css({
+        left: e.pageX,
+        top: e.pageY
+      });
+    }).mouseleave(function() {
+      $(this).find('.imagehomepage').removeClass('visible');
+    });
+  </script>
+</body>
+
+</html>

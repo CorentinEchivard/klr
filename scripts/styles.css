@@ -120,6 +120,31 @@ bold {
   text-decoration-thickness: 1px;
 }
 
+.full {
+  position: relative;
+}
+
+.notfound {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  font-size: 404px;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.nftxt {
+  color: black;
+  font-weight: 400;
+  font-size: 40px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  border-top: 1px solid black;
+}
+
 /* Menu de navigation */
 .navigation {
   background: white;
@@ -190,7 +215,8 @@ bold {
   height: 100%;
   padding: 15px;
 }
-.mp2{
+
+.mp2 {
   border-right: 1px solid black;
 }
 
@@ -206,7 +232,6 @@ bold {
   text-align: center;
   border: none;
   z-index: 0;
-
 }
 
 .description {
@@ -220,7 +245,6 @@ bold {
   box-sizing: border-box;
   margin-bottom: 10px;
   border-left: 1px solid black;
-
 }
 
 .titrecolonne {
@@ -308,6 +332,14 @@ bold {
     line-height: 1.2em;
   }
 
+  .notfound {
+    font-size: 303px;
+  }
+
+  .nftxt {
+    font-size: 32px;
+  }
+
   /* Menu de navigation */
   .navigation {
     background: white;
@@ -315,7 +347,6 @@ bold {
     z-index: 5;
     height: 60px;
     border-bottom: none;
-
   }
 
   .defilement {
@@ -360,7 +391,8 @@ bold {
     z-index: 4;
     border-right: 1px solid black;
   }
-  .mp2{
+
+  .mp2 {
     border-right: 1px solid black;
   }
 
@@ -449,6 +481,14 @@ bold {
     line-height: 1.2em;
   }
 
+  .notfound {
+    font-size: 180px;
+  }
+
+  .nftxt {
+    font-size: 30px;
+  }
+
   /* Défilement texte */
   .defilement {
     font-size: 1.25em;
@@ -473,7 +513,7 @@ bold {
   .navigation {
     background: white;
     position: relative;
-    z-index: 4;
+    z-index: 6;
     width: 100%;
     border-bottom: none;
     height: auto;
@@ -484,6 +524,10 @@ bold {
     border-right: none;
     border-left: none;
     border-bottom: 1px solid black;
+  }
+
+  .menu {
+    border-bottom: none;
   }
 
   /*  Menu visible des projets */
@@ -497,7 +541,8 @@ bold {
     border-bottom: none;
     text-align: center;
   }
-.mp2{
+
+  .mp2 {
     border-right: none;
   }
 
