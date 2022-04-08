@@ -465,6 +465,7 @@ bold {
     width: 70%;
     border-top: 1px solid black;
     border-left: none;
+    z-index: 2;
   }
 }
 
@@ -621,5 +622,7 @@ bold {
     border-left: none;
     border-top: 1px solid black;
     margin-top: 25px;
+    padding-right: 15px;
+    z-index: 2;
   }
 }
