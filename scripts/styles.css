@@ -307,7 +307,7 @@ bold {
   pointer-events: none;
   width: 27%;
   height: auto;
-  transform: translateX(10%) translateY(-50%);
+  transform: translateX(-50%) translateY(-60%);
 }
 
 .imageindex.visible {
